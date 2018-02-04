@@ -86,8 +86,8 @@
                         <!-- BEGIN TOP BAR MENU -->
                         <div class="col-md-6 col-sm-6 additional-nav">
                             <ul class="list-unstyled list-inline pull-right">
-                                <li><a href="Login.aspx">Log In</a></li>
-                                <li><a href="Registration.aspx">Registration</a></li>
+                                <li><a href="login">Log In</a></li>
+                                <li><a href="register">Registration</a></li>
                             </ul>
                         </div>
                         <!-- END TOP BAR MENU -->
@@ -98,7 +98,7 @@
             <!-- BEGIN HEADER -->
             <div class="header">
                 <div class="container">
-                    <a class="site-logo" href="default.aspx">
+                    <a class="site-logo" href="home">
                         <img src="assets/corporate/img/logos/logo1.PNG" style="image-resolution:initial; width: 122px; height:45px; " alt="University Testing"/></a>
 
                     <a href="javascript:void(0);" class="mobi-toggler"><i class="fa fa-bars"></i></a>
@@ -117,7 +117,7 @@
                             <li class="dropdown">
                                 <a class="dropdown-toggle" data-toggle="dropdown" data-target="#" href="javascript:;">Pages</a>
                                 <ul class="dropdown-menu">
-                                    <li><a href="aboutUS.aspx">About Us</a></li>
+                                    <li><a href="aboutus">About Us</a></li>
                                     <li><a href="page-services.html">Services</a></li>
                                     <li><a href="page-prices.html">Prices</a></li>
                                     <li><a href="page-faq.html">FAQ</a></li>

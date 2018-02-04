@@ -32,6 +32,11 @@
                 <%-- Body part --%>
                 <div class="col-md-9 col-sm-9">
                     <h1>Create an account</h1>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="notification" runat="server"></div>
+                        </div>
+                    </div>
                     <div class="content-form-page">
                         <div class="row">
                             <div class="col-md-7 col-sm-7">
@@ -59,7 +64,7 @@
                                             <asp:Label AssociatedControlID="email_Textbox" runat="server" CssClass="col-lg-4 control-label">Email <span class="require">*</span></asp:Label>
                                             <div class="col-lg-8">
                                                 <%-- <input type="text" class="form-control" id="email">--%>
-                                                <asp:TextBox type="text" class="form-control" ID="email_Textbox" runat="server"></asp:TextBox>
+                                                <asp:TextBox type="text" class="form-control" ID="email_Textbox" runat="server" TextMode="Email"></asp:TextBox>
                                             </div>
                                         </div>
                                     </fieldset>
@@ -69,37 +74,37 @@
                                             <%--<label for="password" class="col-lg-4 control-label">Password <span class="require">*</span></label>--%>
                                             <asp:Label AssociatedControlID="password_Textbox" runat="server" CssClass="col-lg-4 control-label">Password <span class="require">*</span></asp:Label>
                                             <div class="col-lg-8">
-                                                <asp:TextBox type="text" class="form-control" ID="password_Textbox" runat="server"></asp:TextBox>
+                                                <asp:TextBox type="text" class="form-control" ID="password_Textbox" runat="server" TextMode="Password"></asp:TextBox>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <%--<label for="confirm-password" class="col-lg-4 control-label">Confirm password <span class="require">*</span></label>--%>
                                             <asp:Label AssociatedControlID="confirm_password_Textbox" runat="server" CssClass="col-lg-4 control-label">Confirm password <span class="require">*</span></asp:Label>
                                             <div class="col-lg-8">
-                                                <asp:TextBox type="text" class="form-control" ID="confirm_password_Textbox" runat="server"></asp:TextBox>
+                                                <asp:TextBox type="text" class="form-control" ID="confirm_password_Textbox" runat="server" TextMode="Password"></asp:TextBox>
                                             </div>
                                         </div>
                                     </fieldset>
-                                    <%--  <fieldset>
-                      <legend>Newsletter</legend>
-                      <div class="checkbox form-group">
-                       <%-- <label>
-                          <div class="col-lg-4 col-sm-4">Singup for Newsletter</div>
-                          <div class="col-lg-8 col-sm-8">
-                            <%--  <input type="checkbox"/>--%>
-                                    <%-- <asp:CheckBox ID="CheckBox" runat="server" />
-                          </div>
-                        </label>--%>
-                                    <%--  </div>--%>
-                                    <%-- </fieldset>--%>
+                                    <%--<fieldset>
+                                            <legend>Newsletter</legend>
+                                            <div class="checkbox form-group">
+                                                 <%-- <label>
+                                                    <div class="col-lg-4 col-sm-4">Singup for Newsletter</div>
+                                                    <div class="col-lg-8 col-sm-8">
+                                                <%--  <input type="checkbox"/>--%>
+                                                <%-- <asp:CheckBox ID="CheckBox" runat="server" />
+                                                      </div>
+                                                    </label>--%>
+                                                <%--  </div>--%>
+                                    <%--</fieldset>--%>
                                     <div class="row">
                                         <div class="col-lg-8 col-md-offset-4 padding-left-0 padding-top-20">
                                             <%-- <button type="submit" class="btn btn-primary">Create an account</button>--%>
                                             <asp:Button ID="create_account_Button" type="submit" CssClass="btn btn-primary" runat="server" Text="Create an account" OnClick="create_account_Button_Click" />
                                             <%--<button type="button" class="btn btn-default">Cancel</button>--%>
-                                            <asp:Button ID="cancle_Button" type="button" CssClass="btn btn-default" runat="server" Text="Cancel" />
+                                            <asp:Button ID="cancel_Button" type="button" CssClass="btn btn-default" runat="server" Text="Cancel" OnClick="cancel_Button_Click" />
                                         </div>
-                                    </div>
+                                    </div>                                    
                                 </div>
                             </div>
                             <div class="col-md-4 col-sm-4 pull-right">

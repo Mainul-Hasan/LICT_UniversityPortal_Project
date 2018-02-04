@@ -2,6 +2,7 @@
 using System.Data;
 using System.Data.SqlClient;
 using System.Web.Configuration;
+using System.Web.UI;
 
 /// <summary>
 /// Summary description for DbConnectClass

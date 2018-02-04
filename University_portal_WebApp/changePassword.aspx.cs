@@ -9,23 +9,34 @@ public partial class forgotPassword : System.Web.UI.Page
 {
     protected void Page_Load(object sender, EventArgs e)
     {
-
+        if (Session["user_id"] == null)
+        {
+            Response.Redirect("login.aspx");
+        }
     }
     protected void changePassword_Button_Click(object sender, EventArgs e)
     {
         DbConnectClass db = new DbConnectClass();
-        int up = db.Update("UPDATE [tblStudent] SET password='" + newPassword_TextBox.Text + "'  WHERE password='" + oldPassword_TextBox.Text + "' AND email='" + Session["user_id"].ToString() + "' ");
+        //Encrypt password
+        AesEncryption des = new AesEncryption();
+        string oldPassEncryptedText = des.EncryptAes(oldPassword_TextBox.Text);
+        string newPassEncryptedText = des.EncryptAes(newPassword_TextBox.Text);
+
+        int up = db.Update("UPDATE [tblStudent] SET password='" + newPassEncryptedText + "'  WHERE password='" + oldPassEncryptedText + "' AND email='" + Session["user_id"].ToString() + "' ");
 
         if (up == 0)
         {
-            Response.Write("<script>alert('Old Password is wrong')</script>");
-            //Response.Redirect("passwordChange.aspx");
+            notification.InnerHtml = "<div class='alert alert-danger alert-dismissable fade in'>" +
+                                     "<a href='#' class='close' data-dismiss='alert' aria-lable='close'>&times;</a>" +
+                                     "<strong>Old password mismatch</strong>" + "<br/>" +
+                                     "</div>";
         }
         else
         {
-            //Session["user_id"] = null;
+            Session["user_id"] = null;
             Label1.Visible = true;
             Label1.Text = "Pass changed Successfully";
+            Response.Redirect("Login.aspx");
             //Response.Write("<script>alert('Pass changed Successfully')</script>");
         }
     }

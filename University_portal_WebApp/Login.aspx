@@ -33,6 +33,11 @@
                 <!-- BEGIN CONTENT -->
                 <div class="col-md-9 col-sm-9">
                     <h1>Login</h1>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div id="notification" runat="server"></div>
+                        </div>
+                    </div>
                     <div class="content-form-page">
                         <div class="row">
                             <div class="col-md-7 col-sm-7">
@@ -50,7 +55,7 @@
                                         <asp:Label AssociatedControlID="password_TextBox" runat="server" CssClass="col-lg-4 control-label">Password <span class="require">*</span></asp:Label>
                                         <div class="col-lg-8">
                                             <%--<input type="text" class="form-control" id="password">--%>
-                                            <asp:TextBox ID="password_TextBox" type="text" class="form-control" runat="server"></asp:TextBox>
+                                            <asp:TextBox ID="password_TextBox" type="text" class="form-control" runat="server" TextMode="Password"></asp:TextBox>
                                         </div>
                                     </div>
                                     <div class="row">

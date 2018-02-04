@@ -1,8 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.UI;
+using System.Data.SqlClient;
 using System.Web.UI.WebControls;
 
 public partial class Login : System.Web.UI.Page
@@ -14,7 +11,14 @@ public partial class Login : System.Web.UI.Page
     protected void login_Button_Click(object sender, EventArgs e)
     {
         DbConnectClass db = new DbConnectClass();
-        bool hasRows = db.Select("SELECT email,password FROM [tblStudent] WHERE email='" + email_TextBox.Text + "' AND password='" + password_TextBox.Text + "' ");
+        //Encrypt password
+        AesEncryption des = new AesEncryption();
+        string passEncryptedText = des.EncryptAes(password_TextBox.Text);
+
+        bool hasRows = db.Select("SELECT email,password FROM [tblStudent] WHERE email='" + email_TextBox.Text + "' AND password='" + passEncryptedText + "' ");
+
+        //bool hasRows = db.Select("SELECT email,password FROM [tblStudent] WHERE email=@email AND password=@passEnc ");
+        
 
         if (hasRows)
         {
@@ -23,7 +27,10 @@ public partial class Login : System.Web.UI.Page
         }
         else
         {
-            Response.Write("<script>alert('ID or password mismatch')</script>");
+            notification.InnerHtml = "<div class='alert alert-danger alert-dismissable fade in'>" +
+                                     "<a href='#' class='close' data-dismiss='alert' aria-lable='close'>&times;</a>" +
+                                     "<strong>Id or password mismatch</strong>" + "<br/>" +
+                                     "</div>";
         }
     }
 }
