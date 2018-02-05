@@ -25,11 +25,13 @@ public partial class Registration : System.Web.UI.Page
 
         try
         {
-            db.Insert("INSERT INTO [tblStudent] (fname,lname,email,password) VALUES ('" + firstname_Textbox.Text + "','" + lastname_Textbox.Text + "','" + email_Textbox.Text + "','" + passEncryptedText + "')");
+            //db.Insert("INSERT INTO [tblStudent] (fname,lname,email,password) VALUES ('" + firstname_Textbox.Text + "','" + lastname_Textbox.Text + "','" + email_Textbox.Text + "','" + passEncryptedText + "')");
+
+            string message = db.Insert(firstname_Textbox.Text, lastname_Textbox.Text, email_Textbox.Text, passEncryptedText);
 
             notification.InnerHtml = "<div class='alert alert-success alert-dismissable fade in'>" +
                                      "<a href='#' class='close' data-dismiss='alert' aria-lable='close'>&times;</a>" +
-                                     "<strong>Data submitted successfully</strong>" +
+                                     "<strong>" + message +"</strong>" +
                                      "</div>";
         }
         catch (Exception exception)

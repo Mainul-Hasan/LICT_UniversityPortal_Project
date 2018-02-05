@@ -48,7 +48,7 @@
                                             <asp:Label AssociatedControlID="firstname_Textbox" runat="server" CssClass="col-lg-4 control-label">First Name <span class="require">*</span></asp:Label>
                                             <div class="col-lg-8">
                                                 <%--  <input type="text" class="form-control" id="firstname">--%>
-                                                <asp:TextBox type="text" class="form-control" ID="firstname_Textbox" runat="server"></asp:TextBox>
+                                                <asp:TextBox type="text" class="form-control" ID="firstname_Textbox" runat="server"></asp:TextBox>                                                
                                             </div>
                                         </div>
                                         <div class="form-group">
