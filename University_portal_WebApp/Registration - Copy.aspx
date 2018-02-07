@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Registration.aspx.cs" Inherits="Registration" %>
+﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="Registration - Copy.aspx.cs" Inherits="Registration" EnableEventValidation="false" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <title>Create new account</title>
@@ -48,9 +48,7 @@
                                             <asp:Label AssociatedControlID="firstname_Textbox" runat="server" CssClass="col-lg-4 control-label">First Name <span class="require">*</span></asp:Label>
                                             <div class="col-lg-8">
                                                 <%--  <input type="text" class="form-control" id="firstname">--%>
-                                                <asp:TextBox type="text" class="form-control" ID="firstname_Textbox" runat="server"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="First Name is required" SetFocusOnError="True" ControlToValidate="firstname_Textbox" ForeColor="red"></asp:RequiredFieldValidator>
-                                                                                             
+                                                <asp:TextBox type="text" class="form-control" ID="firstname_Textbox" runat="server"></asp:TextBox>                                                
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -59,7 +57,6 @@
                                             <div class="col-lg-8">
                                                 <%--<input type="text" class="form-control" id="lastname">--%>
                                                 <asp:TextBox type="text" class="form-control" ID="lastname_Textbox" runat="server"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" ErrorMessage="Last Name is required" SetFocusOnError="True" ControlToValidate="lastname_Textbox" ForeColor="red"></asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
@@ -68,7 +65,6 @@
                                             <div class="col-lg-8">
                                                 <%-- <input type="text" class="form-control" id="email">--%>
                                                 <asp:TextBox type="text" class="form-control" ID="email_Textbox" runat="server" TextMode="Email"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" ErrorMessage="Email is required" SetFocusOnError="True" ControlToValidate="email_Textbox" ForeColor="red"></asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                     </fieldset>
@@ -79,15 +75,13 @@
                                             <asp:Label AssociatedControlID="password_Textbox" runat="server" CssClass="col-lg-4 control-label">Password <span class="require">*</span></asp:Label>
                                             <div class="col-lg-8">
                                                 <asp:TextBox type="text" class="form-control" ID="password_Textbox" runat="server" TextMode="Password"></asp:TextBox>
-                                                <asp:RequiredFieldValidator ID="RequiredFieldValidator4" runat="server" ErrorMessage="Password is required" SetFocusOnError="True" ControlToValidate="password_Textbox" ForeColor="red"></asp:RequiredFieldValidator>
                                             </div>
                                         </div>
                                         <div class="form-group">
                                             <%--<label for="confirm-password" class="col-lg-4 control-label">Confirm password <span class="require">*</span></label>--%>
                                             <asp:Label AssociatedControlID="confirm_password_Textbox" runat="server" CssClass="col-lg-4 control-label">Confirm password <span class="require">*</span></asp:Label>
                                             <div class="col-lg-8">
-                                                <asp:TextBox type="text" class="form-control" ID="confirm_password_Textbox" runat="server" TextMode="Password" required></asp:TextBox>                                                
-                                                <asp:CompareValidator ID="CompareValidator1" runat="server" ControlToCompare="password_Textbox" ControlToValidate="confirm_password_Textbox" ErrorMessage="Password does not match" SetFocusOnError="True" ForeColor="red"></asp:CompareValidator>
+                                                <asp:TextBox type="text" class="form-control" ID="confirm_password_Textbox" runat="server" TextMode="Password"></asp:TextBox>
                                             </div>
                                         </div>
                                     </fieldset>

@@ -15,9 +15,7 @@ public partial class Registration : System.Web.UI.Page
         //string strPath = WebConfigurationManager.ConnectionStrings["StudentDBCon"].ConnectionString;
         //con = new SqlConnection(strPath);
         //con.Open();
-        
     }
-
     protected void create_account_Button_Click(object sender, EventArgs e)
     {
         DbConnectClass db = new DbConnectClass();
@@ -33,7 +31,7 @@ public partial class Registration : System.Web.UI.Page
 
             notification.InnerHtml = "<div class='alert alert-success alert-dismissable fade in'>" +
                                      "<a href='#' class='close' data-dismiss='alert' aria-lable='close'>&times;</a>" +
-                                     "<strong>" + message + "</strong>" +
+                                     "<strong>" + message +"</strong>" +
                                      "</div>";
         }
         catch (Exception exception)
