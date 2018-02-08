@@ -17,7 +17,7 @@
         routes.MapPageRoute("afterlogin", "afterlogin", "~/afterlogin.aspx");
         routes.MapPageRoute("changePassword", "changepassword", "~/changePassword.aspx");
         routes.MapPageRoute("aboutUs", "aboutus", "~/aboutUS.aspx");
-        
+        routes.MapPageRoute("contactUs", "contactUs", "~/ContactUs.aspx");
     }
     
     void Application_End(object sender, EventArgs e) 
