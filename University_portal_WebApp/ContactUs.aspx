@@ -3,7 +3,7 @@
 <asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
     <style>
         #googleMap {
-            height: 400px;
+            height: 517px;
             width: 100%;
             background-color: grey;
         }
@@ -44,15 +44,15 @@
     <div class="container">
         <div id="contactUs">
             <div class="row">
-                <div class="col-lg-6">
+                <div class="col-lg-6 contact">
                     <h1>Contact Us</h1>
                     <!-- We're going to place the form here in the next step -->
                     <div id="notification" runat="server"></div>
-                    <div class="controls">
+                    <div class="content-form-page">
                         <div class="row">
                             <div class="col-md-6">
                                 <div class="form-group">
-                                    <asp:Label ID="lblfname" AssociatedControlID="txtFirstName" runat="server" CssClass="control-label" Text="Firstname *"></asp:Label>
+                                    <asp:Label ID="lblfname" AssociatedControlID="txtFirstName" runat="server" Text="Firstname *"></asp:Label>
                                     <asp:TextBox ID="txtFirstName" runat="server" CssClass="form-control" placeholder="Please enter your firstname" required="required"></asp:TextBox>
                                 </div>
                             </div>
@@ -87,7 +87,7 @@
                         <div class="row">
                             <div class="col-md-12">
                                 <div class="form-group">
-                                    <asp:Label ID="lblMessage" AssociatedControlID="txtMessage" runat="server" Text="Message" CssClass="control-label"></asp:Label>
+                                    <asp:Label ID="lblMessage" AssociatedControlID="txtMessage" runat="server" Text="Message"></asp:Label>
                                     <asp:TextBox ID="txtMessage" runat="server" class="form-control" placeholder="Please,leave us a message" Rows="4" required="required" TextMode="MultiLine"></asp:TextBox>
                                 </div>
                             </div>
