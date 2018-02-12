@@ -46,6 +46,6 @@ public partial class Registration : System.Web.UI.Page
     }
     protected void cancel_Button_Click(object sender, EventArgs e)
     {
-        Response.Redirect("Registration.aspx");
+        Response.Redirect("default.aspx");
     }
 }

@@ -48,18 +48,50 @@ public class DbConnectClass
                 message = "Email already exists. Please choose a different email.";
                 break;          
             default:
-                message = "Registration successful.";
+                message = "Registration successful. Please check your mail for activation code";
+                SendActivationMail.SendMail(email);
                 break;
         }
         return message;
     }
-    public bool Select(string query)
+    public int SelectLogin(string email,string password)
     {
+        string query = "SELECT email,password,ActivationCode FROM [tblStudent] WHERE email=@email AND password=@password";
         _cmd = new SqlCommand(query, con);
+        _cmd.Parameters.AddWithValue("@email", email);
+        _cmd.Parameters.AddWithValue("@password", password);
         dr = _cmd.ExecuteReader();
-        bool v = dr.HasRows;
+        int res = 0;
+        if (dr.HasRows)
+        {
+            while (dr.Read())
+            {
+                string actCode = dr["ActivationCode"].ToString();
+                if (actCode.Equals(String.Empty))
+                {
+                    res = 1;
+                }
+
+                else
+                {
+                    res = 2;
+                }
+            }
+        }
+        else
+        {
+            res = 0;
+        }
         con.Close();
-        return v;
+        return res;
+    }
+
+    public DataSet Select(string query)
+    {
+        SqlDataAdapter da = new SqlDataAdapter(query,con);
+        DataSet ds = new DataSet();
+        da.Fill(ds);
+        return ds;
     }
 
     public int Update(string query)
@@ -68,10 +100,5 @@ public class DbConnectClass
         int up = _cmd.ExecuteNonQuery();
         con.Close();
         return up;
-    }
-
-
-
-
-
+    }    
 }
