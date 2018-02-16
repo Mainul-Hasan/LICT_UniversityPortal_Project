@@ -86,12 +86,34 @@ public class DbConnectClass
         return res;
     }
 
+    
     public DataSet Select(string query)
     {
         SqlDataAdapter da = new SqlDataAdapter(query,con);
         DataSet ds = new DataSet();
         da.Fill(ds);
         return ds;
+    }
+
+
+    public bool AdminLogin(string email, string password)
+    {
+        bool res;
+        string query = "SELECT email,password FROM [tblAdmin] WHERE email=@email AND password=@password";
+        _cmd = new SqlCommand(query, con);
+        _cmd.Parameters.AddWithValue("@email", email);
+        _cmd.Parameters.AddWithValue("@password", password);
+        dr = _cmd.ExecuteReader();
+        if (dr.HasRows)
+        {
+            res = true;
+        }
+        else
+        {
+            res = false;
+        }
+        con.Close();
+        return res;
     }
 
     public int Update(string query)

@@ -11,6 +11,7 @@
 
     void RegisterRoutes(RouteCollection routes)
     {
+        //User Pages
         routes.MapPageRoute("default", "home", "~/default.aspx");
         routes.MapPageRoute("register", "register", "~/Registration.aspx");
         routes.MapPageRoute("login", "login", "~/Login.aspx");
@@ -18,6 +19,12 @@
         routes.MapPageRoute("changePassword", "changepassword", "~/changePassword.aspx");
         routes.MapPageRoute("aboutUs", "aboutus", "~/aboutUS.aspx");
         routes.MapPageRoute("contactUs", "contactUs", "~/ContactUs.aspx");
+        
+        //Admin Pages
+        //routes.MapPageRoute("admin-login", "administrator", "~/Admin/admin-login.aspx");        
+        //routes.MapPageRoute("admin-dashboard", "dashboard", "~/Admin/admin-default.aspx");
+        
+       
     }
     
     void Application_End(object sender, EventArgs e) 
