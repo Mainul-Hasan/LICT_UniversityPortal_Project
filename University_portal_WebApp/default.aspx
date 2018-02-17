@@ -21,12 +21,12 @@
                             
                             <div class="container">
                                 <div class="carousel-position-six text-uppercase text-center">
-                                    <h2 class="margin-bottom-20 animate-delay carousel-title-v5" data-animation="animated fadeInDown">Expore the power
+                                    <h2 class="margin-bottom-20 animate-delay carousel-title-v5" data-animation="animated fadeInDown">Inspiring Innovation 
                                         <br />
-                                        <span class="carousel-title-normal">of Metronic</span>
+                                        <span class="carousel-title-normal">Inspiring Minds</span>
                                     </h2>
-                                    <p class="carousel-subtitle-v5 border-top-bottom margin-bottom-30" data-animation="animated fadeInDown">This is what you were looking for</p>
-                                    <a class="carousel-btn-green" href="#" data-animation="animated fadeInUp">Purchase Now!</a>
+                                    <p class="carousel-subtitle-v5 border-top-bottom margin-bottom-30" data-animation="animated fadeInDown">Your Future Starts Here </p>
+                                    <a class="carousel-btn-green" href="#" data-animation="animated fadeInUp">Let's Do This</a>
                                 </div>
                             </div>
                         </div>
@@ -35,18 +35,11 @@
                         <div class="item carousel-item-nine">
                             <div class="container">
                                 <div class="carousel-position-six">
-                                    <h2 class="animate-delay carousel-title-v6 text-uppercase" data-animation="animated fadeInDown">Need a website design?
+                                    <h2 class="animate-delay carousel-title-v6 text-uppercase" data-animation="animated fadeInDown">Experience Tradition
                             </h2>
-                                    <p class="carousel-subtitle-v6 text-uppercase" data-animation="animated fadeInDown">
-                                        This is what you were looking for
-                           
-                                    </p>
-                                    <p class="carousel-subtitle-v7 margin-bottom-30" data-animation="animated fadeInDown">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-                                        Sed est nunc, sagittis at consectetur id.
-                           
-                                    </p>
-                                    <a class="carousel-btn-green" href="#" data-animation="animated fadeInUp">Purchase Now!</a>
+                                    <p class="carousel-subtitle-v6 text-uppercase" data-animation="animated fadeInDown">Expect Success.</p>
+                                    <p class="carousel-subtitle-v7 margin-bottom-30" data-animation="animated fadeInDown">Real Life. Real Knowledge. Real People. </p>
+                                    <a class="carousel-btn-green" href="#" data-animation="animated fadeInUp">Start Now!</a>
                                 </div>
                             </div>
                         </div>
@@ -55,17 +48,9 @@
                         <div class="item carousel-item-ten">
                             <div class="container">
                                 <div class="carousel-position-six">
-                                    <h2 class="animate-delay carousel-title-v6 text-uppercase" data-animation="animated fadeInDown">Powerful &amp; Clean
-                            </h2>
-                                    <p class="carousel-subtitle-v6 text-uppercase" data-animation="animated fadeInDown">
-                                        Responsive Website &amp; Admin Theme
-                           
-                                    </p>
-                                    <p class="carousel-subtitle-v7 margin-bottom-30" data-animation="animated fadeInDown">
-                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.<br />
-                                        Sed est nunc, sagittis at consectetur id.
-                           
-                                    </p>
+                                    <h2 class="animate-delay carousel-title-v6 text-uppercase" data-animation="animated fadeInDown">From Here, It’s Possible</h2>
+                                    <p class="carousel-subtitle-v6 text-uppercase" data-animation="animated fadeInDown">Go Farther Than You Ever Dreamed!</p>
+                                    <p class="carousel-subtitle-v7 margin-bottom-30" data-animation="animated fadeInDown">Seek Your Dream </p>
                                 </div>
                             </div>
                         </div>

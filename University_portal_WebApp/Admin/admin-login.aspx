@@ -36,7 +36,7 @@
         -->
         <div class="container">
             <div class="card card-container">
-                <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+                <img id="profile-img" style="width: 100%; height: 50%;" src="../assets/corporate/img/logos/full-color_white.png" />
                 <p id="notification" class="profile-name-card" runat="server"></p>
                 <div class="form-signin">
                     <span id="reauth-email" class="reauth-email"></span>

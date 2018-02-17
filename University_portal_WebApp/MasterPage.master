@@ -70,6 +70,7 @@
                             <ul class="list-unstyled list-inline pull-right">
                                 <li><a href="login">Log In</a></li>
                                 <li><a href="register">Registration</a></li>
+                                <li><a href="Admin/admin-login.aspx">Admin</a></li>
                             </ul>
                         </div>
                         <!-- END TOP BAR MENU -->

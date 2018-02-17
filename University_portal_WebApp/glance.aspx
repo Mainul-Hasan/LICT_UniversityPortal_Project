@@ -4,65 +4,7 @@
     <link href="assets/pages/css/gallery.css" rel="stylesheet">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
-    <%--<div class="container gallery-container">
 
-    <h1>At Glance</h1>
-
-    <p class="page-description text-center">The Beautiful University </p>
-    
-     <div class="tz-gallery">
-
-        <div class="row">
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="assets/pages/img/Glance/benches.jpg">
-                    <img src="assets/pages/img/Glance/benches.jpg" alt="Park">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="assets/pages/img/Glance/bridge.jpg">
-                    <img src="assets/pages/img/Glance/bridge.jpg" alt="Bridge">
-                </a>
-            </div>
-            <div class="col-sm-12 col-md-4">
-                <a class="lightbox" href="assets/pages/img/Glance/coast.jpg">
-                    <img src="assets/pages/img/Glance/coast.jpg" alt="Tunnel">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="assets/pages/img/Glance/park.jpg">
-                    <img src="assets/pages/img/Glance/park.jpg" alt="Coast">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="assets/pages/img/Glance/rails.jpg">
-                    <img src="assets/pages/img/Glance/rails.jpg" alt="Rails">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="assets/pages/img/Glance/rocks.jpg">
-                    <img src="assets/pages/img/Glance/rocks.jpg" alt="Traffic">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="assets/pages/img/Glance/sky.jpg">
-                    <img src="assets/pages/img/Glance/sky.jpg" alt="Rocks">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="assets/pages/img/Glance/traffic.jpg">
-                    <img src="assets/pages/img/Glance/traffic.jpg" alt="Benches">
-                </a>
-            </div>
-            <div class="col-sm-6 col-md-4">
-                <a class="lightbox" href="assets/pages/img/Glance/tunnel.jpg">
-                    <img src="assets/pages/img/Glance/tunnel.jpg" alt="Sky">
-                </a>
-            </div>
-        </div>
-
-    </div>
-
-</div>--%>
     <!-- BEGIN SIDEBAR & CONTENT -->
     <div class="main">
         <div class="container">
