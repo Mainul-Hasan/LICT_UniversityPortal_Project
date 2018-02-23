@@ -1,148 +1,38 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/MasterPage.master" AutoEventWireup="true" CodeFile="gallary.aspx.cs" Inherits="gallary" %>
 
-<asp:Content ID="Content1" ContentPlaceHolderID="head" Runat="Server">
+<%@ Import Namespace="System.Data.SqlClient" %>
+<%@ Import Namespace="System.Web.Configuration" %>
+
+<asp:Content ID="Content1" ContentPlaceHolderID="head" runat="Server">
 </asp:Content>
-<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" Runat="Server">
-    <div class="container-fluid text-center bg-grey">
-        <h2>Gallary</h2><br>
-        
+<asp:Content ID="Content2" ContentPlaceHolderID="ContentPlaceHolder1" runat="Server">
+    <div class="container-fluid text-center">
+        <h2>Faculty Members</h2>
+        <br>
+        <%
+            string strPath = WebConfigurationManager.ConnectionStrings["StudentDBCon"].ConnectionString;
+            SqlConnection con = new SqlConnection(strPath); 
+            SqlCommand cmd = new SqlCommand("SELECT * FROM tblFacultyMembers",con);
+            con.Open();
+            SqlDataReader dr = cmd.ExecuteReader();                    
+        %>
         <div class="row text-center">
+            <%while(dr.Read()) {%>                        
+                  
+                                                                 
             <div class="col-sm-4">
                 <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/1.jpg" alt="Paris" width="400" height="300">
-                    <p><strong>DEAN</strong></p>
-                    <p>Faculty of FSE</p>
+                    <img src="<%=dr["_image"].ToString() %>" alt="Paris" width="300" height="300">
+                    <p><strong><%=dr["FName"].ToString() %></strong></p>
+                    <p><strong><%=dr["designation"].ToString() %></strong></p>
+                    <p><strong><%=dr["Qualification"].ToString() %></strong></p>
+                    <p><strong><%=dr["EmailId"].ToString() %></strong></p>
+                    <p><strong><%=dr["ContactNo"].ToString() %></strong></p>
+                    <p><%=dr["faculty"].ToString() %></p>
                 </div>
             </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/2.jpg" alt="New York" width="400" height="300">
-                    <p><strong>Dean</strong></p>
-                    <p>Dept of Business</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/3.jpg" alt="San Francisco" width="400" height="300">
-                    <p><strong>Dean</strong></p>
-                    <p>Faculty of Social Science</p>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/4.jpg" alt="Paris" width="400" height="300">
-                    <p><strong>DEAN</strong></p>
-                    <p>Faculty of FSE</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/5.jpg" alt="New York" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Dept of Business</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/6.jpg" alt="San Francisco" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Faculty of Social Science</p>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/7.jpg" alt="Paris" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Faculty of FSE</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/8.jpg" alt="New York" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Dept of Business</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/9.jpg" alt="San Francisco" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Faculty of Social Science</p>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/1.jpg" alt="Paris" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Faculty of FSE</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/2.jpg" alt="New York" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Dept of Business</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/3.jpg" alt="San Francisco" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Faculty of Social Science</p>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/4.jpg" alt="Paris" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Faculty of FSE</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/5.jpg" alt="New York" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Dept of Business</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/6.jpg" alt="San Francisco" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Faculty of Social Science</p>
-                </div>
-            </div>
-        </div>
-        <div class="row text-center">
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/7.jpg" alt="Paris" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Faculty of FSE</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/8.jpg" alt="New York" width="400" height="300">
-                    <p><strong>Teacher</strong></p>
-                    <p>Dept of Business</p>
-                </div>
-            </div>
-            <div class="col-sm-4">
-                <div class="img-thumbnail">
-                    <img src="assets/pages/img/Teacher/9.jpg" alt="San Francisco" width="400" height="300">
-                    <p><strong>Dean</strong></p>
-                    <p>Faculty of Social Science</p>
-                </div>
-            </div>
+            <%}
+              con.Close(); %>
         </div>
     </div>
 

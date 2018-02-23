@@ -41,7 +41,7 @@
                 <div class="form-signin">
                     <span id="reauth-email" class="reauth-email"></span>
                     <%--<input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>--%>
-                    <asp:TextBox ID="txtInputEmail" class="form-control" placeholder="Email address" type="email" required="required" autofocus="autofocus" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtInputEmail" class="form-control" placeholder="Email address" required="required" autofocus="autofocus" runat="server"></asp:TextBox>
                     <%--<input type="password" id="inputPassword" class="form-control" placeholder="Password" required>--%>
                     <asp:TextBox type="password" id="txtInputPassword" class="form-control" placeholder="Password" required="required" runat="server"></asp:TextBox>
                     <div id="remember" class="checkbox">

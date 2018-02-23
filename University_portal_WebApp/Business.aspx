@@ -131,10 +131,10 @@
         <div class="row">
             <div class="menudes">
                 <ul>
-                    <li><a href="CSE.aspx">Computer Science and Engineering</a></li>
-                    <li><a href="EEE.aspx">Electric and Electroinic Engineering</a></li>
-                    <li><a href="ETE.aspx">Electric and Telecommunication Engineering</a></li>
-                    <li><a href="CIVIL.aspx">Civil
+                    <li><a href="gallary.aspx">Computer Science and Engineering</a></li>
+                    <li><a href="gallary.aspx">Electric and Electroinic Engineering</a></li>
+                    <li><a href="gallary.aspx">Electric and Telecommunication Engineering</a></li>
+                    <li><a href="gallary.aspx">Civil
                         <br />
                         Engineering</a></li>
                     <div class="marca"></div>
