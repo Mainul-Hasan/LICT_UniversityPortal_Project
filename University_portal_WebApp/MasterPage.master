@@ -52,7 +52,7 @@
 </head>
 <body class="corporate">
     <form id="form1" runat="server">
-        <div>            
+        <div>
             <!-- BEGIN TOP BAR -->
             <div class="pre-header">
                 <div class="container">
@@ -144,17 +144,19 @@
                                                 <div class="col-md-4 header-navigation-col">
                                                     <h4>Undergraduates</h4>
                                                     <ul>
-                                                        <li><a href="index.html">Undergraduates Program</a></li>
-                                                        <li><a href="index.html">Tution fee</a></li>
-                                                        <li><a href="index.html">Apply Online</a></li>
+                                                        <li><a href="undergraduate-programs.aspx">Undergraduates Program</a></li>
+                                                        <li><a href="undergraduate-tuition-fees.aspx">Tution fee</a></li>
+                                                        <li><a href="undergraduate-dates-and-deadlines.aspx">Dates and Deadlines</a></li>
+                                                        <li><a href="apply-now.aspx">Apply Online</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-md-4 header-navigation-col">
                                                     <h4>Graduates</h4>
                                                     <ul>
-                                                        <li><a href="index.html">Graduates Program</a></li>
-                                                        <li><a href="index.html">Tution fee</a></li>
-                                                        <li><a href="index.html">Apply Online</a></li>
+                                                        <li><a href="graduate-programs.aspx">Graduates Program</a></li>
+                                                        <li><a href="graduate-tution-fees.aspx">Tution fee</a></li>
+                                                        <li><a href="graduate-dates-and-deadlines.aspx">Dates and Deadlines</a></li>
+                                                        <li><a href="apply-now.aspx">Apply Online</a></li>
                                                     </ul>
                                                 </div>
                                                 <div class="col-md-4 header-navigation-col">
@@ -218,8 +220,8 @@
                     <div class="row">
                         <!-- BEGIN BOTTOM ABOUT BLOCK -->
                         <div class="col-md-4 col-sm-6 pre-footer-col">
-                            <h2>About us</h2>
-                            <p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam sit nonummy nibh euismod tincidunt ut laoreet dolore magna aliquarm erat sit volutpat.</p>
+                            <h2>Disclaimer</h2>
+                            <p>Michigan Technological University is an Equal Opportunity Educational Institution/Equal Opportunity Employer, which includes providing equal opportunity for protected veterans and individuals with disabilities.</p>
 
                             <div class="photo-stream">
                                 <h2>Photos Stream</h2>
@@ -267,8 +269,8 @@
                                 California, US<br>
                                 Phone: 300 323 3456<br>
                                 Fax: 300 323 1456<br>
-                                Email: <a href="mailto:info@metronic.com">info@metronic.com</a><br>
-                                Skype: <a href="skype:metronic">metronic</a>
+                                Email: <a href="mailto:info@metronic.com">info@mtu.com</a><br>
+                                Skype: <a href="skype:metronic">MTU</a>
                             </address>
 
                             <div class="pre-footer-subscribe-box pre-footer-subscribe-box-vertical">
@@ -289,7 +291,9 @@
                         <!-- BEGIN TWITTER BLOCK -->
                         <div class="col-md-4 col-sm-6 pre-footer-col">
                             <h2 class="margin-bottom-0">Latest Tweets</h2>
-                            <a class="twitter-timeline" href="https://twitter.com/twitterapi" data-tweet-limit="2" data-theme="dark" data-link-color="#57C8EB" data-widget-id="455411516829736961" data-chrome="noheader nofooter noscrollbar noborders transparent">Loading tweets by @uvtesting...</a>
+                            <%--<a class="twitter-timeline" href="https://twitter.com/twitterapi" data-tweet-limit="2" data-theme="dark" data-link-color="#57C8EB" data-widget-id="455411516829736961" data-chrome="noheader nofooter noscrollbar noborders transparent">Loading tweets by @uvtesting...</a>--%>
+                            <%--<a class="twitter-timeline" data-theme="dark" data-tweet-limit="2" href="https://twitter.com/UniPortalLICT?ref_src=twsrc%5Etfw" data-link-color="#57C8EB" data-widget-id="455411516829736961" data-chrome="noheader nofooter noscrollbar noborders transparent">Tweets by UniPortalLICT</a>--%>
+                            <a class="twitter-timeline" href="https://twitter.com/UniPortalLICT?ref_src=twsrc%5Etfw" data-tweet-limit="1" data-theme="dark" data-link-color="#57C8EB" data-chrome="noheader nofooter noscrollbar noborders transparent">Tweets by UniPortalLICT</a>
                         </div>
                         <!-- END TWITTER BLOCK -->
                     </div>
@@ -356,6 +360,12 @@
 
             <script src="assets/corporate/scripts/layout.js" type="text/javascript"></script>
             <script src="assets/pages/scripts/bs-carousel.js" type="text/javascript"></script>
+
+            <!--Twitter API -->
+            <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            
+            <!--Jquery Marquee-->
+            <script src="assets/pages/scripts/jquery.marquee.min.js"></script>
             <script type="text/javascript">
                 jQuery(document).ready(function () {
                     Layout.init();
@@ -363,6 +373,11 @@
                     Layout.initTwitter();
                     //Layout.initFixHeaderWithPreHeader(); /* Switch On Header Fixing (only if you have pre-header) */
                     //Layout.initNavScrolling(); 
+                });
+
+                $('.marquee').marquee({
+                    direction: 'left',
+                    pauseOnHover: true
                 });
             </script>
             <!-- END PAGE LEVEL JAVASCRIPTS -->

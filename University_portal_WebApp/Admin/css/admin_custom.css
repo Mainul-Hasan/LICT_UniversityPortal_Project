@@ -1,3 +1,54 @@
 ﻿.navbar-brand {
     padding: 2px 15px !important;
 }
+
+#page-wrapper {
+    height: 100vh;
+    padding: 10px 0;
+}
+
+#page-wrapper > div{
+    background-color: #ffffff;
+}
+
+.table {
+    margin-left: 0px;
+    text-align: center; 
+
+}
+
+.table > tbody tr:first-child {
+    background-color: #222222;
+}
+
+.table > tbody tr:first-child > th {
+    color: #ffffff;
+    text-align: center; 
+}
+
+/*News Section*/
+.table > tbody tr:first-child {
+    color: #ffffff;
+    text-align: center; 
+}
+
+.table > tbody tr:first-child input {
+    color: #000000;
+}
+
+.table > tbody tr:last-child {
+    background-color: #ffffff;
+    color: #000000;
+
+}
+
+/*Admin Dashboard Section*/
+.panel-black {
+    border-color: #222222;
+}
+
+.panel-black > .panel-heading {
+    color: #fff;
+    background-color: #222222;
+    border-color: #222222;
+}

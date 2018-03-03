@@ -9,6 +9,7 @@ using System.Web.UI.WebControls;
 
 public partial class afterlogin : System.Web.UI.Page
 {
+    
     protected void Page_Load(object sender, EventArgs e)
     {
         if (Session["user_id"] == null)
@@ -24,6 +25,7 @@ public partial class afterlogin : System.Web.UI.Page
             
         }
 
+        
     }    
     protected void ProfileInfo_Click(object sender, EventArgs e)
     {
@@ -88,9 +90,11 @@ public partial class afterlogin : System.Web.UI.Page
 
     protected void btnSubmit_OnClick(object sender, EventArgs e)
     {
+        
         DbConnectClass db = new DbConnectClass();
         foreach (GridViewRow r in GridView1.Rows)
         {
+            FileUpload pathfile = (FileUpload)r.FindControl("FileUpload1");
             TextBox textfname = (TextBox) r.FindControl("txtfname");
             TextBox textlame = (TextBox) r.FindControl("txtlname");
             TextBox textaddress = (TextBox) r.FindControl("txtAddress");
@@ -98,6 +102,9 @@ public partial class afterlogin : System.Web.UI.Page
             DropDownList listgender = (DropDownList) r.FindControl("ddGender");
             TextBox textcareerObj = (TextBox)r.FindControl("txtCareerObj");
             TextBox textskills = (TextBox) r.FindControl("txtSkills");
+
+            string path = "assets/pages/img/user-images/" + pathfile.FileName;
+            pathfile.SaveAs(MapPath(path));
 
             string fname = textfname.Text;
             string lname = textlame.Text;
@@ -107,7 +114,7 @@ public partial class afterlogin : System.Web.UI.Page
             string careerObj = textcareerObj.Text;
             string skills = textskills.Text;
 
-            string query = "UPDATE [tblStudent] SET fname = '" + fname + "' , lname = '" + lname + "' , Address = '" + address + "' , phone = '" + phone + "' , gender = '" + gender + "' , CareerObjective = '" + careerObj + "' , skills = '" + skills + "'  WHERE email='" + Session["user_id"].ToString() + "' ";
+            string query = "UPDATE [tblStudent] SET fname = '" + fname + "' , lname = '" + lname + "' , Address = '" + address + "' , phone = '" + phone + "' , gender = '" + gender + "' , CareerObjective = '" + careerObj + "' , skills = '" + skills + "', Image = '" + path + "'  WHERE email='" + Session["user_id"].ToString() + "' ";
 
             db.Update(query);
         }

@@ -48,7 +48,7 @@
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                     </button>
-                    <a class="navbar-brand" href="index.html">
+                    <a class="navbar-brand" href="../home">
                         <img id="profile-img" style="width: 100%; height: 100%;" src="../assets/corporate/img/logos/full-color_white.png" />
                     </a>
                 </div>
@@ -160,17 +160,17 @@
                 <!-- Sidebar Menu Items - These collapse to the responsive navigation menu on small screens -->
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
-                        <li>
+                        <li class='<%= SetCssClass("admin-default.aspx") %>'>
                             <a href="admin-default.aspx"><i class="fa fa-fw fa-dashboard"></i>Dashboard</a>
                         </li>
-                        <li>
+                        <li class='<%= SetCssClass("admin-faculty.aspx") %>'>
                             <a href="admin-faculty.aspx"><i class="fa fa-fw fa-bar-chart-o"></i>Edit Faculty Members</a>
                         </li>
-                        <li>
+                        <li class='<%= SetCssClass("admin-news.aspx") %>'>
                             <a href="admin-news.aspx"><i class="fa fa-fw fa-table"></i>News</a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-edit"></i>Forms</a>
+                        <li class='<%= SetCssClass("AddBanner.aspx") %>'>
+                            <a href="AddBanner.aspx"><i class="fa fa-fw fa-edit"></i>Add Banner</a>
                         </li>
                         <li>
                             <a href="#"><i class="fa fa-fw fa-desktop"></i>Bootstrap Elements</a>
@@ -226,7 +226,7 @@
 
 
     <!-- jQuery -->
-    <script src="js/jquery.js"></script>
+    <script src="js/jquery.min.js"></script>
 
     <!-- Bootstrap Core JavaScript -->
     <script src="js/bootstrap.min.js"></script>
@@ -234,6 +234,43 @@
     <!-- Morris Charts JavaScript -->
     <script src="js/plugins/morris/raphael.min.js"></script>
     <script src="js/plugins/morris/morris.min.js"></script>
-    <script src="js/plugins/morris/morris-data.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+
+            function Graph() {
+
+                var data2 = "";
+                $.ajax({
+                    type: 'GET',
+                    url: "http://localhost:35767/GetData.ashx",
+                    dataType: 'json',
+                    async: false,
+                    contentType: "application/json; charset=utf-8",
+                    data: '',
+                    success: function (result) {
+                        data2 = result;
+                        //alert("Success");
+                    },
+                    error: function (xhr, status, error) {
+                        alert(error);
+                    }
+                });
+
+                return data2;
+            }
+
+            Morris.Donut({
+                element: 'morris-donut-chart',
+                colors: [
+                    '#222222'
+                ],
+                data: Graph()
+                //data: [
+                //    { label: "Student", value: 10 },
+                //    { label: "Faculty", value: 20 }
+                //]
+            });
+        });
+    </script>
 </body>
 </html>

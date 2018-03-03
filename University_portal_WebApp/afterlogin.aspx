@@ -40,7 +40,7 @@
                                                         <ItemTemplate>
                                                             <div class="row">
                                                                 <div class="col-md-4">
-                                                                    <img src="assets/pages/img/user-images/defaultImage.png" alt="profile image" />
+                                                                    <img src="<%# Eval("Image")%>"  width="236px" height="236px" alt="profile image" />
                                                                 </div>
                                                                 <div class="col-md-8">
                                                                     <h5>Full Name: <span><%# Eval("fname") + " " + Eval("lname") %></span></h5>
@@ -90,7 +90,8 @@
                                                                 <ItemTemplate>
                                                                     <div class="row">
                                                                         <div class="col-md-4">
-                                                                            <img src="assets/pages/img/user-images/defaultImage.png" alt="profile image" />
+                                                                            <img src='<%# Eval("Image")%>' width="236px" height="236px" alt="profile image" />
+                                                                            <asp:FileUpload ID="FileUpload1" runat="server" />
                                                                         </div>
                                                                         <div class="col-md-6">
                                                                             <fieldset>

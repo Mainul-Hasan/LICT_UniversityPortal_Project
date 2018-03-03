@@ -17,4 +17,11 @@ public partial class admin : System.Web.UI.MasterPage
         Session["admin_id"] = null;
         Response.Redirect("admin-login.aspx");
     }
+
+    protected string SetCssClass(string page)
+    {
+        return Request.Url.AbsolutePath.ToLower().EndsWith(page.ToLower()) ? "active" : "";
+    }
+
+
 }

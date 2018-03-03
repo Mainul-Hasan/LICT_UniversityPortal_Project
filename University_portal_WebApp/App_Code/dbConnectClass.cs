@@ -86,7 +86,6 @@ public class DbConnectClass
         return res;
     }
 
-    
     public DataSet Select(string query)
     {
         SqlDataAdapter da = new SqlDataAdapter(query,con);
