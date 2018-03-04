@@ -161,39 +161,33 @@
                 <div class="collapse navbar-collapse navbar-ex1-collapse">
                     <ul class="nav navbar-nav side-nav">
                         <li class='<%= SetCssClass("admin-default.aspx") %>'>
-                            <a href="admin-default.aspx"><i class="fa fa-fw fa-dashboard"></i>Dashboard</a>
+                            <a href="admin-default.aspx"><i class="fa fa-fw fa-dashboard"></i> Dashboard</a>
                         </li>
                         <li class='<%= SetCssClass("admin-faculty.aspx") %>'>
-                            <a href="admin-faculty.aspx"><i class="fa fa-fw fa-bar-chart-o"></i>Edit Faculty Members</a>
+                            <a href="admin-faculty.aspx"><i class="fa fa-fw fa-bar-chart-o"></i> Edit Faculty Members</a>
                         </li>
                         <li class='<%= SetCssClass("admin-news.aspx") %>'>
-                            <a href="admin-news.aspx"><i class="fa fa-fw fa-table"></i>News</a>
+                            <a href="admin-news.aspx"><i class="fa fa-fw fa-table"></i> News</a>
                         </li>
                         <li class='<%= SetCssClass("AddBanner.aspx") %>'>
-                            <a href="AddBanner.aspx"><i class="fa fa-fw fa-edit"></i>Add Banner</a>
+                            <a href="AddBanner.aspx"><i class="fa fa-fw fa-edit"></i> Add Banner</a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-desktop"></i>Bootstrap Elements</a>
+                        <li class='<%= SetCssClass("insertGallery.aspx") %>'>
+                            <a href="insertGallery.aspx"><i class="fa fa-fw fa-picture-o"></i> Insert Gallery Images</a>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-wrench"></i>Bootstrap Grid</a>
-                        </li>
-                        <li>
-                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-arrows-v"></i>Dropdown <i class="fa fa-fw fa-caret-down"></i></a>
+                        <li class='<%= SetCssClass("insertPlaceStudents.aspx") %> <%= SetCssClass("editplacedstudents.aspx") %> '>
+                            <a href="javascript:;" data-toggle="collapse" data-target="#demo"><i class="fa fa-fw fa-group"></i> Edit Alumni <i class="fa fa-fw fa-caret-down"></i></a>
                             <ul id="demo" class="collapse">
                                 <li>
-                                    <a href="#">Dropdown Item</a>
+                                    <a href="insertPlaceStudents.aspx">Insert Placed Students</a>
                                 </li>
                                 <li>
-                                    <a href="#">Dropdown Item</a>
+                                    <a href="editplacedstudents.aspx">Edit Placed Students</a>
                                 </li>
                             </ul>
                         </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-file"></i>Blank Page</a>
-                        </li>
-                        <li>
-                            <a href="#"><i class="fa fa-fw fa-dashboard"></i>RTL Dashboard</a>
+                        <li class='<%= SetCssClass("insertPlaceStudents.aspx") %>'>
+                            <a href="insert_course.aspx"><i class="fa fa-fw fa-book"></i> Edit Courses</a>
                         </li>
                     </ul>
                 </div>

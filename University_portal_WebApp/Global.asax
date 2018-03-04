@@ -12,13 +12,13 @@
     void RegisterRoutes(RouteCollection routes)
     {
         //User Pages
-        routes.MapPageRoute("default", "home", "~/default.aspx");
-        routes.MapPageRoute("register", "register", "~/Registration.aspx");
-        routes.MapPageRoute("login", "login", "~/Login.aspx");
-        routes.MapPageRoute("afterlogin", "afterlogin", "~/afterlogin.aspx");
-        routes.MapPageRoute("changePassword", "changepassword", "~/changePassword.aspx");
-        routes.MapPageRoute("aboutUs", "aboutus", "~/aboutUS.aspx");
-        routes.MapPageRoute("contactUs", "contactUs", "~/ContactUs.aspx");
+        routes.MapPageRoute("default", "home", "~/default.aspx"); //Home
+        routes.MapPageRoute("register", "register", "~/Registration.aspx"); //Registration
+        routes.MapPageRoute("login", "login", "~/Login.aspx"); //Login
+        routes.MapPageRoute("afterlogin", "afterlogin", "~/afterlogin.aspx"); //Afterlogin
+        routes.MapPageRoute("aboutUs", "aboutus", "~/aboutUS.aspx"); //About Us
+        routes.MapPageRoute("contactUs", "contactUs", "~/ContactUs.aspx"); //Contact Us
+        routes.MapPageRoute("gallery", "gallery", "~/glance.aspx"); //Gallery
         
         //Admin Pages
         //routes.MapPageRoute("admin-login", "administrator", "~/Admin/admin-login.aspx");        

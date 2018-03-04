@@ -168,11 +168,11 @@
                             </li>
                             <!--About Us-->
                             <li>
-                                <a href="aboutUS.aspx">About Us</a>
+                                <a href="aboutUs">About Us</a>
                             </li>
                             <!--Gallery-->
                             <li>
-                                <a href="glance.aspx">Gallery</a>
+                                <a href="gallery">Gallery</a>
                             </li>
                             <!--News and Events-->
                             <li class="dropdown">
@@ -182,9 +182,13 @@
                                     <li><a href="blog-item.html">Events</a></li>
                                 </ul>
                             </li>
+                            <!--Alumni-->
+                            <li>
+                                <a href="placement.aspx">Alumni</a>
+                            </li>
                             <!--Contact Us-->
                             <li>
-                                <a href="ContactUs.aspx">Contact Us</a>
+                                <a href="ContactUs">Contact Us</a>
                             </li>
 
                             <!-- BEGIN TOP SEARCH -->

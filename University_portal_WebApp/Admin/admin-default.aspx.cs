@@ -6,10 +6,10 @@ namespace Admin
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-            //if (Session["admin_id"] == null)
-            //{
-            //    Response.Redirect("admin-login.aspx");
-            //}   
+            if (Session["admin_id"] == null)
+            {
+                Response.Redirect("admin-login.aspx");
+            }   
         }
     }
 }
